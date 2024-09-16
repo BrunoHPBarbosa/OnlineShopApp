@@ -1,15 +1,16 @@
-# Tv Shows App
+# Online Shop App
 
-Create a native android app, using the TheMovieDb API.
+Create a native android app, using Firebase.
 
 
 ## :movie_camera: Video
 <img src="https://github.com/user-attachments/assets/ad14a11f-0152-485e-9b44-c3a3b8d7e5f1" width="250">&emsp;<img src="https://github.com/user-attachments/assets/b78beb0b-35da-4517-b19a-979558485dc5" width="250">&emsp;<img src="https://github.com/user-attachments/assets/18f16fed-ef33-4a1a-bde0-b5473f7d5e32" width="250">&emsp;<img src="https://github.com/user-attachments/assets/dcc701e6-145b-46be-973b-54cf01181448" width="250">
 
 ## :camera_flash: Screenshots
-<img src="https://github.com/user-attachments/assets/43c890b6-823a-4637-bf43-58737d208b96" width="250">&emsp;
-<img src="https://github.com/user-attachments/assets/d79eb15c-c8cd-45b4-9065-9c2f4b12e087" width="250">&emsp;
-<img src="https://github.com/user-attachments/assets/a59704d1-e933-4bf0-a407-e4288aabbb02" width="250">&emsp;
+<img src="https://github.com/user-attachments/assets/d24f28d2-59fa-4c36-b45a-69c1c22ab4f9" width="250">&emsp;
+<img src="https://github.com/user-attachments/assets/cd205a05-cdf6-498f-8d41-8de9877c4262" width="250">&emsp;
+<img src="https://github.com/user-attachments/assets/81c4e84b-217e-4569-95ee-22b01cdd967f" width="250">&emsp;
+<img src="https://github.com/user-attachments/assets/62b7a2c6-3f52-4f82-8ca8-a2a7bbe71891" width="250">&emsp;
 
 
 

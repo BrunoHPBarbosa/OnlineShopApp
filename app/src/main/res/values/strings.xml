@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">OnlineShopApp</string>
+
+    <string name="intro_title">Welcome to <font color="#39c7a5"> Digital Store</font> \n a <font color="#39c7a5"> Gateway </font>to the Latest Tech</string>
+
+    <string name="intro_sub_title">Sign in to Explore a wide range of cutting-edge\n digital products. Dont have an account yet?\n Register now and enjoy a seamless \n and secure shopping experience</string>
+    <string name="let_s_get_started">Let´s Get Started</string>
+
+    <string name="signing">Already have an account? <font color="#39c7a5">Sign in</font> </string>
+    <string name="welcome_back">Welcome Back!</string>
+    <string name="bruno">Bruno</string>
+    <string name="see_all">See All</string>
+    <string name="categories">Categories</string>
+    <string name="recomendation">Recomendation</string>
+    <string name="explorer">Explorer</string>
+    <string name="cart">Cart</string>
+    <string name="wish">WishList</string>
+    <string name="my_order">My Order</string>
+    <string name="profile">Profile</string>
+    <string name="adidas">Adidas</string>
+    <string name="description">description</string>
+    <string name="_5">5</string>
+    <string name="select_model">Select Model</string>
+    <string name="_0">$0</string>
+    <string name="title">Title</string>
+    <string name="buy_now">Buy Now</string>
+    <string name="my_cart">My Cart</string>
+    <string name="subtotal">Subtotal</string>
+    <string name="fee_delivery">Fee Delivery</string>
+    <string name="total_tax">Total Tax</string>
+    <string name="cash">Cash</string>
+    <string name="pay_cash_the_medicine_arrives_at_the_destination">Pay Cash the medicine\n arrives at the destination</string>
+    <string name="login_to_your_account_and_make_payment">Login to your account\n And make payment</string>
+    <string name="check_out">Check out</string>
+
+</resources>

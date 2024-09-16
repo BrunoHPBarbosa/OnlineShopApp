@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.MainActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="100dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="48dp"
+                android:layout_marginEnd="16dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/welcome_back"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:id="@+id/textView5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/bruno"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    app:srcCompat="@drawable/bell_icon" />
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/search_icon" />
+
+            </LinearLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_marginTop="16dp">
+
+                <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/viewPager2"
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ProgressBar
+                    android:id="@+id/progressBarSlider"
+                    style="?android:attr/progressBarStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="@+id/viewPager2"
+                    app:layout_constraintEnd_toEndOf="@+id/viewPager2"
+                    app:layout_constraintStart_toStartOf="@+id/viewPager2"
+                    app:layout_constraintTop_toTopOf="@+id/viewPager2" />
+
+                <com.tbuonomo.viewpagerdotsindicator.DotsIndicator
+                    android:id="@+id/dotsIndicator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:visibility="gone"
+                    app:dotsColor="@color/lightGray"
+                    app:dotsCornerRadius="8dp"
+                    app:dotsSize="6dp"
+                    app:dotsSpacing="2dp"
+                    app:dotsWidthFactor="2.5"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/viewPager2"
+                    app:selectedDotColor="@color/green"
+                    tools:visibility="visible" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/categories"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/see_all"
+                    android:textColor="@color/green" />
+            </LinearLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvCategory"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clipToPadding="false"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ProgressBar
+                    android:id="@+id/progressBarCategory"
+                    style="?android:attr/progressBarStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="@+id/rvCategory"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/rvCategory" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:orientation="horizontal">
+
+                <TextView
+
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/recomendation"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/see_all"
+                    android:textColor="@color/green" />
+            </LinearLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvRecomendation"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clipToPadding="false"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="8dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ProgressBar
+                    android:id="@+id/progressBarRecomendation"
+                    style="?android:attr/progressBarStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="@+id/rvRecomendation"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/rvRecomendation" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_gravity="bottom"
+            android:background="@drawable/green_button_bg">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="8dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:orientation="vertical">
+
+                    <ImageView
+
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="8dp"
+                        app:srcCompat="@drawable/btn_1" />
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="4dp"
+                        android:layout_weight="1"
+                        android:text="@string/explorer"
+                        android:textColor="@color/white"
+                        android:textSize="10sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/cartBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:orientation="vertical">
+
+                    <ImageView
+
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="8dp"
+                        app:srcCompat="@drawable/btn_2" />
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="4dp"
+                        android:layout_weight="1"
+                        android:text="@string/cart"
+                        android:textColor="@color/white"
+                        android:textSize="10sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:orientation="vertical">
+
+                    <ImageView
+
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="8dp"
+                        app:srcCompat="@drawable/btn_3" />
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="4dp"
+                        android:layout_weight="1"
+                        android:text="@string/wish"
+                        android:textColor="@color/white"
+                        android:textSize="10sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:orientation="vertical">
+
+                    <ImageView
+
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="8dp"
+                        app:srcCompat="@drawable/btn_4" />
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="4dp"
+                        android:layout_weight="1"
+                        android:text="@string/my_order"
+                        android:textColor="@color/white"
+                        android:textSize="10sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                    android:orientation="vertical">
+
+                    <ImageView
+
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="8dp"
+                        app:srcCompat="@drawable/btn_5" />
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="4dp"
+                        android:layout_weight="1"
+                        android:text="@string/profile"
+                        android:textColor="@color/white"
+                        android:textSize="10sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </com.google.android.material.bottomnavigation.BottomNavigationView>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginStart="16dp"
+    android:id="@+id/mainLayout">
+
+    <ImageView
+        android:id="@+id/pic"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/gray_bg"
+        android:background="@drawable/gray_bg"
+        />
+
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/adidas"
+        android:layout_marginEnd="8dp"
+        android:visibility="gone"
+        tools:visibility="visible"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="12sp"
+        android:layout_gravity="center"/>
+</LinearLayout>

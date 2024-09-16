@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.DetailActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="48dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/backBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/back" />
+
+                <ImageView
+                    android:id="@+id/favBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/fav_icon" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <ImageView
+                android:id="@+id/img"
+                android:layout_width="match_parent"
+                android:layout_height="290dp"
+                android:background="@drawable/gray_bg"
+                android:layout_margin="16dp"
+                android:padding="16dp"
+                tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/picList"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:clipToPadding="false"
+                android:layout_marginTop="16dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="16dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/titleTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/title"
+                    android:textColor="@color/black"
+                    android:textSize="23sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/priceText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/_0"
+                    android:textColor="@color/black"
+                    android:textSize="22dp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/select_model"
+                    android:layout_marginStart="16dp"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <ImageView
+                    android:id="@+id/imageView8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="8dp"
+                    app:srcCompat="@drawable/star" />
+
+                <TextView
+                    android:id="@+id/ratingTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/_5"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/modelList"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:clipToPadding="false"
+                android:layout_marginTop="16dp"/>
+
+            <TextView
+                android:id="@+id/descriptionTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/description"
+                android:layout_margin="16dp"
+                android:textColor="@color/darkGray"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_margin="8dp"
+                    android:background="@drawable/green_button_bg"
+                    style="@android:style/Widget.Button"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:id="@+id/addToCartBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/buy_now" />
+
+                <ImageButton
+                    android:id="@+id/cartBtn"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/gray_bg"
+                    app:srcCompat="@drawable/btn_2"
+                    app:tint="@color/black" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
